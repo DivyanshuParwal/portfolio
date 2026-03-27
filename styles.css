@@ -31,6 +31,31 @@ body {
   line-height: 1.65;
 }
 
+.bg-orb {
+  position: fixed;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  filter: blur(70px);
+  pointer-events: none;
+  z-index: -2;
+  opacity: 0.32;
+}
+
+.bg-orb-a {
+  top: -170px;
+  right: -100px;
+  background: radial-gradient(circle, rgba(92, 132, 255, 0.7), transparent 70%);
+  animation: driftA 12s ease-in-out infinite alternate;
+}
+
+.bg-orb-b {
+  bottom: -170px;
+  left: -120px;
+  background: radial-gradient(circle, rgba(45, 205, 255, 0.55), transparent 70%);
+  animation: driftB 14s ease-in-out infinite alternate;
+}
+
 .skip-link {
   position: fixed;
   left: 12px;
@@ -101,6 +126,44 @@ a {
   backdrop-filter: blur(8px);
   background: rgba(9, 13, 25, 0.8);
   border-bottom: 1px solid rgba(152, 169, 255, 0.16);
+}
+
+.social-proof {
+  padding-top: 1.4rem;
+}
+
+.proof-track {
+  border: 1px solid var(--border);
+  background: linear-gradient(180deg, rgba(18, 26, 49, 0.96), rgba(13, 19, 36, 0.95));
+  box-shadow: var(--shadow);
+  border-radius: var(--radius);
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  overflow: hidden;
+}
+
+.proof-item {
+  padding: 0.8rem 0.9rem;
+  border-right: 1px solid rgba(149, 165, 255, 0.17);
+}
+
+.proof-item:last-child {
+  border-right: none;
+}
+
+.proof-kicker {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.72rem;
+  color: #9fb4ff;
+  font-weight: 700;
+}
+
+.proof-value {
+  margin: 0.2rem 0 0;
+  font-size: 0.88rem;
+  color: #d7e2ff;
 }
 
 .nav-wrap {
@@ -192,6 +255,13 @@ a {
 .card-v2 {
   position: relative;
   overflow: clip;
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+}
+
+.card-v2:hover {
+  transform: translateY(-3px);
+  border-color: rgba(175, 190, 255, 0.45);
+  box-shadow: 0 28px 58px rgba(3, 8, 24, 0.55);
 }
 
 .card-v2::before {
@@ -493,6 +563,79 @@ li {
   padding: 1rem 1rem 0.95rem;
 }
 
+.project-mock {
+  border: 1px solid rgba(152, 169, 255, 0.2);
+  border-radius: 12px;
+  margin-bottom: 0.8rem;
+  background: rgba(9, 13, 25, 0.55);
+  overflow: hidden;
+}
+
+.mock-bar {
+  height: 22px;
+  background: linear-gradient(90deg, rgba(130, 147, 255, 0.38), rgba(55, 182, 255, 0.25));
+  border-bottom: 1px solid rgba(145, 163, 255, 0.2);
+}
+
+.project-mock-budgetstayz .mock-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 0.45rem;
+  padding: 0.6rem;
+}
+
+.mock-map {
+  min-height: 110px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, rgba(86, 106, 195, 0.45), rgba(55, 188, 255, 0.35));
+}
+
+.mock-panel {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.mock-panel span,
+.mock-feed span {
+  display: block;
+  border-radius: 7px;
+  background: rgba(163, 178, 255, 0.26);
+}
+
+.mock-panel span:nth-child(1) {
+  height: 26px;
+}
+
+.mock-panel span:nth-child(2) {
+  height: 48px;
+}
+
+.mock-panel span:nth-child(3) {
+  height: 26px;
+}
+
+.project-mock-devhub .mock-feed {
+  display: grid;
+  gap: 0.42rem;
+  padding: 0.6rem;
+}
+
+.mock-feed span:nth-child(1) {
+  height: 22px;
+}
+
+.mock-feed span:nth-child(2) {
+  height: 40px;
+}
+
+.mock-feed span:nth-child(3) {
+  height: 30px;
+}
+
+.mock-feed span:nth-child(4) {
+  height: 22px;
+}
+
 .project-card p {
   margin: 0.75rem 0 0;
   color: var(--muted);
@@ -581,6 +724,31 @@ li {
   transform: translateY(0);
 }
 
+.rise-in {
+  transform: translateY(18px) scale(0.985);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+.rise-in.visible {
+  transform: translateY(0) scale(1);
+}
+
+.delay-1 {
+  transition-delay: 0.06s;
+}
+
+.delay-2 {
+  transition-delay: 0.12s;
+}
+
+.delay-3 {
+  transition-delay: 0.18s;
+}
+
+.tilt-card {
+  transform-style: preserve-3d;
+}
+
 a:focus-visible,
 button:focus-visible {
   outline: 2px solid #8fc2ff;
@@ -598,6 +766,10 @@ button:focus-visible {
 
   .experience-grid {
     grid-template-columns: 1fr;
+  }
+
+  .proof-track {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -632,6 +804,10 @@ button:focus-visible {
     padding-top: 3rem;
   }
 
+  .proof-track {
+    grid-template-columns: 1fr;
+  }
+
   .project-grid,
   .split-section,
   .metric-grid {
@@ -650,8 +826,34 @@ button:focus-visible {
     transition: none;
   }
 
+  .rise-in {
+    transform: none;
+  }
+
   .btn,
   .cursor-glow {
     transition: none;
+  }
+
+  .bg-orb {
+    animation: none;
+  }
+}
+
+@keyframes driftA {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(-18px, 18px);
+  }
+}
+
+@keyframes driftB {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(16px, -14px);
   }
 }

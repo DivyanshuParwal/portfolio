@@ -22,6 +22,8 @@
     <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
     <div class="cursor-glow" id="cursor-glow" aria-hidden="true"></div>
     <div class="bg-grid" aria-hidden="true"></div>
+    <div class="bg-orb bg-orb-a" aria-hidden="true"></div>
+    <div class="bg-orb bg-orb-b" aria-hidden="true"></div>
 
     <header class="site-header">
       <div class="container nav-wrap">
@@ -43,8 +45,29 @@
     </header>
 
     <main id="home">
+      <section class="container section social-proof reveal" id="proof">
+        <div class="proof-track">
+          <div class="proof-item">
+            <p class="proof-kicker">Work Impact</p>
+            <p class="proof-value">3M+ users supported in production systems</p>
+          </div>
+          <div class="proof-item">
+            <p class="proof-kicker">Performance</p>
+            <p class="proof-value">30% faster APIs and 20% lower retrieval latency</p>
+          </div>
+          <div class="proof-item">
+            <p class="proof-kicker">Scale</p>
+            <p class="proof-value">15+ APIs across 7 Asian markets</p>
+          </div>
+          <div class="proof-item">
+            <p class="proof-kicker">Recognition</p>
+            <p class="proof-value">Capillary Star Award for backend delivery excellence</p>
+          </div>
+        </div>
+      </section>
+
       <section class="hero container section" id="about">
-        <div class="hero-content reveal card-v2">
+        <div class="hero-content reveal card-v2 rise-in">
           <p class="availability">Open to backend engineering opportunities</p>
           <h1>
             Building backend systems that stay <span>fast, secure, and reliable</span> under real
@@ -76,7 +99,7 @@
           </ul>
         </div>
 
-        <aside class="hero-panel reveal card-v2">
+        <aside class="hero-panel reveal card-v2 rise-in delay-1">
           <h2>Recruiter snapshot</h2>
           <ul>
             <li>Built and maintained APIs for enterprise programs like Shell and IndiGo.</li>
@@ -91,24 +114,24 @@
       </section>
 
       <section class="section container" id="impact">
-        <div class="section-head reveal">
+        <div class="section-head reveal rise-in">
           <p class="section-kicker">Performance Snapshot</p>
           <h2>Measured delivery, not just responsibilities</h2>
         </div>
         <div class="metric-grid">
-          <article class="metric-card reveal card-v2">
+          <article class="metric-card reveal card-v2 rise-in">
             <p class="metric"><span class="metric-value" data-target="3" data-suffix="M+">3M+</span></p>
             <p class="label">Users supported across loyalty platforms</p>
           </article>
-          <article class="metric-card reveal card-v2">
+          <article class="metric-card reveal card-v2 rise-in delay-1">
             <p class="metric"><span class="metric-value" data-target="15" data-suffix="+">15+</span></p>
             <p class="label">REST APIs built and maintained</p>
           </article>
-          <article class="metric-card reveal card-v2">
+          <article class="metric-card reveal card-v2 rise-in delay-2">
             <p class="metric"><span class="metric-value" data-target="30" data-suffix="%">30%</span></p>
             <p class="label">Average response-time improvement</p>
           </article>
-          <article class="metric-card reveal card-v2">
+          <article class="metric-card reveal card-v2 rise-in delay-3">
             <p class="metric"><span class="metric-value" data-target="40" data-suffix="%">40%</span></p>
             <p class="label">Reduction in cascading service failure risk</p>
           </article>
@@ -116,14 +139,14 @@
       </section>
 
       <section class="section container" id="experience">
-        <div class="section-head reveal">
+        <div class="section-head reveal rise-in">
           <p class="section-kicker">Experience</p>
           <h2>Backend ownership across critical product releases</h2>
         </div>
 
         <div class="experience-grid">
           <div class="timeline">
-            <article class="timeline-card reveal card-v2">
+            <article class="timeline-card reveal card-v2 rise-in">
               <div class="timeline-title">
                 <h3>Software Engineer - Capillary Technologies</h3>
                 <p>Jul 2023 - Present | Remote</p>
@@ -152,7 +175,7 @@
               </div>
             </article>
 
-            <article class="timeline-card reveal card-v2">
+            <article class="timeline-card reveal card-v2 rise-in delay-1">
               <div class="timeline-title">
                 <h3>Software Engineer Intern - Capillary Technologies</h3>
                 <p>Jan 2023 - Jun 2023 | Remote</p>
@@ -174,7 +197,7 @@
             </article>
           </div>
 
-          <aside class="wins-card reveal card-v2">
+          <aside class="wins-card reveal card-v2 rise-in delay-2">
             <h3>How I create impact in teams</h3>
             <ul>
               <li>Own sprint work end-to-end from planning to post-release monitoring.</li>
@@ -190,12 +213,21 @@
       </section>
 
       <section class="section container" id="projects">
-        <div class="section-head reveal">
+        <div class="section-head reveal rise-in">
           <p class="section-kicker">Selected Projects</p>
           <h2>Products built end-to-end outside work</h2>
         </div>
         <div class="project-grid">
-          <article class="project-card reveal card-v2">
+          <article class="project-card reveal card-v2 tilt-card rise-in">
+            <div class="project-mock project-mock-budgetstayz" aria-hidden="true">
+              <div class="mock-bar"></div>
+              <div class="mock-grid">
+                <div class="mock-map"></div>
+                <div class="mock-panel">
+                  <span></span><span></span><span></span>
+                </div>
+              </div>
+            </div>
             <h3>BudgetStayz</h3>
             <p>
               Full-stack couch surfing product with map-based room discovery, city-level filtering,
@@ -207,7 +239,13 @@
               design.
             </p>
           </article>
-          <article class="project-card reveal card-v2">
+          <article class="project-card reveal card-v2 tilt-card rise-in delay-1">
+            <div class="project-mock project-mock-devhub" aria-hidden="true">
+              <div class="mock-bar"></div>
+              <div class="mock-feed">
+                <span></span><span></span><span></span><span></span>
+              </div>
+            </div>
             <h3>DevHub</h3>
             <p>
               MERN developer social platform with profile workflows, posts, and connection features
@@ -222,7 +260,7 @@
       </section>
 
       <section class="section container split-section">
-        <article class="info-card reveal card-v2">
+        <article class="info-card reveal card-v2 rise-in">
           <h2>Core Skills</h2>
           <div class="skill-pills">
             <span>JavaScript</span><span>TypeScript</span><span>Node.js</span><span>Express</span>
@@ -232,7 +270,7 @@
           </div>
         </article>
 
-        <article class="info-card reveal card-v2">
+        <article class="info-card reveal card-v2 rise-in delay-1">
           <h2>Education & Recognition</h2>
           <p>
             B.E. in Electronics and Telecommunication Engineering, Institute of Engineering and
@@ -245,7 +283,7 @@
         </article>
       </section>
 
-      <section class="section container contact-band reveal card-v2" id="contact">
+      <section class="section container contact-band reveal card-v2 rise-in" id="contact">
         <p class="section-kicker">Contact</p>
         <h2>Looking for an engineer who can improve performance and reliability quickly?</h2>
         <p>
