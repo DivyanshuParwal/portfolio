@@ -21,13 +21,13 @@
     <a class="skip-link" href="#home">Skip to main content</a>
     <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
     <div class="cursor-glow" id="cursor-glow" aria-hidden="true"></div>
-    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="background-noise" aria-hidden="true"></div>
     <div class="bg-orb bg-orb-a" aria-hidden="true"></div>
     <div class="bg-orb bg-orb-b" aria-hidden="true"></div>
 
     <header class="site-header">
       <div class="container nav-wrap">
-        <a class="logo" href="#home">DP<span>/FullStack</span></a>
+        <a class="logo" href="#home"><span class="logo-mark">DP</span> FullStack</a>
         <button class="menu-btn" aria-label="Open navigation menu" aria-expanded="false">
           <span></span>
           <span></span>
@@ -41,56 +41,27 @@
           <a href="#projects">Projects</a>
           <a href="#contact">Contact</a>
         </nav>
-        <a class="nav-cta" href="#contact">Let's Talk</a>
+        <a class="nav-cta" href="#contact">Book Intro</a>
       </div>
     </header>
 
     <main id="home">
-      <section class="container section social-proof reveal" id="proof">
-        <div class="proof-track">
-          <div class="proof-item">
-            <p class="proof-kicker">Work Impact</p>
-            <p class="proof-value">3M+ users supported in production systems</p>
-          </div>
-          <div class="proof-item">
-            <p class="proof-kicker">Performance</p>
-            <p class="proof-value">30% faster APIs and 20% lower retrieval latency</p>
-          </div>
-          <div class="proof-item">
-            <p class="proof-kicker">Full-Stack Delivery</p>
-            <p class="proof-value">Backend-first systems with production-ready React workflows</p>
-          </div>
-          <div class="proof-item">
-            <p class="proof-kicker">Recognition</p>
-            <p class="proof-value">Capillary Star Award for backend delivery excellence</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="hero container section" id="about">
-        <div class="hero-content reveal card-v2 rise-in">
-          <div class="hero-blur" aria-hidden="true"></div>
-          <p class="availability">Open to full-stack roles (backend-focused)</p>
+      <section class="container section hero-v2" id="about">
+        <div class="hero-v2-intro reveal rise-in">
+          <p class="availability">Open to Full-Stack roles (Backend-focused)</p>
           <h1>
-            Full-stack developer focused on <span>backend architecture</span> that scales with real
-            user traffic.
+            Building reliable products with <span>backend architecture</span> at the core and clean
+            end-to-end delivery.
           </h1>
           <p class="hero-text">
-            Software Engineer at Capillary Technologies with proven impact across loyalty products
-            used by 3M+ users in 7 Asian markets. I build end-to-end features from API contracts
-            and data models to React interfaces, with strongest depth in Node.js services, database
-            performance, and distributed integrations.
+            Software Engineer at Capillary Technologies delivering full-stack outcomes for platforms
+            used by 3M+ users across 7 Asian markets. Strongest depth: Node.js services, secure API
+            design, data performance, and distributed integrations.
           </p>
           <div class="hero-cta">
-            <a class="btn btn-primary" href="mailto:divyanshuparwal2001@gmail.com">Hire me</a>
-            <a class="btn btn-secondary" href="#projects">View my work</a>
+            <a class="btn btn-primary" href="mailto:divyanshuparwal2001@gmail.com">Let's build</a>
+            <a class="btn btn-secondary" href="#projects">Explore case studies</a>
           </div>
-          <ul class="trust-row">
-            <li>3M+ users served</li>
-            <li>15+ APIs delivered</li>
-            <li>7 Asian markets</li>
-            <li>Backend-first full stack</li>
-          </ul>
           <ul class="quick-links">
             <li><a href="mailto:divyanshuparwal2001@gmail.com">Email</a></li>
             <li><a href="tel:+918319639223">Call</a></li>
@@ -101,39 +72,68 @@
             </li>
           </ul>
         </div>
+        <div class="hero-v2-grid reveal rise-in delay-1">
+          <article class="spotlight-card card-v2">
+            <p class="spot-kicker">Live Impact</p>
+            <p class="spot-value">3M+</p>
+            <p class="spot-copy">Users supported in production loyalty ecosystems.</p>
+          </article>
+          <article class="spotlight-card card-v2">
+            <p class="spot-kicker">Performance Wins</p>
+            <p class="spot-value">30% & 20%</p>
+            <p class="spot-copy">API and data retrieval latency improvements.</p>
+          </article>
+          <article class="spotlight-card card-v2">
+            <p class="spot-kicker">Security</p>
+            <p class="spot-value">JWT + RBAC</p>
+            <p class="spot-copy">Auth hardening for 3M+ accounts with zero post-release incidents.</p>
+          </article>
+          <article class="spotlight-card card-v2">
+            <p class="spot-kicker">Recognition</p>
+            <p class="spot-value">Capillary Star</p>
+            <p class="spot-copy">Awarded for backend delivery and ownership impact.</p>
+          </article>
+        </div>
+      </section>
 
-        <aside class="hero-panel reveal card-v2 rise-in delay-1">
-          <h2>Why this profile stands out</h2>
-          <ul>
-            <li>Built and maintained APIs for enterprise programs like Shell and IndiGo.</li>
-            <li>Cut average API response time by 30% and retrieval latency by 20%.</li>
-            <li>Implemented JWT + RBAC across 3M+ accounts with zero post-release auth incidents.</li>
-            <li>Reduced cascading failure risk by 40% through event-driven service workflows.</li>
-          </ul>
-          <div class="badge-group">
-            <span>Node.js</span><span>Express</span><span>React</span><span>MongoDB</span
-            ><span>PostgreSQL</span><span>AWS</span>
+      <section class="container section social-proof reveal" id="proof">
+        <div class="proof-track">
+          <div class="proof-item">
+            <p class="proof-kicker">Stack Identity</p>
+            <p class="proof-value">Full-Stack Engineer with Backend-first ownership</p>
           </div>
-        </aside>
+          <div class="proof-item">
+            <p class="proof-kicker">Core Backend</p>
+            <p class="proof-value">Node.js, Express, MongoDB, PostgreSQL, Redis</p>
+          </div>
+          <div class="proof-item">
+            <p class="proof-kicker">Frontend Delivery</p>
+            <p class="proof-value">React workflows integrated with API-first design</p>
+          </div>
+          <div class="proof-item">
+            <p class="proof-kicker">Infra & Scale</p>
+            <p class="proof-value">Docker, Kafka, AWS, CI/CD in production contexts</p>
+          </div>
+        </div>
       </section>
 
       <section class="section container" id="impact">
         <div class="section-head reveal rise-in">
-          <p class="section-kicker">Performance Snapshot</p>
-          <h2>Measured delivery, not just responsibilities</h2>
+          <p class="section-kicker">Impact Dashboard</p>
+          <h2>Evidence of shipping with performance and reliability in mind</h2>
         </div>
         <div class="metric-grid">
           <article class="metric-card reveal card-v2 rise-in">
             <p class="metric"><span class="metric-value" data-target="3" data-suffix="M+">3M+</span></p>
-            <p class="label">Users supported across loyalty platforms</p>
+            <p class="label">Users supported in enterprise loyalty systems</p>
           </article>
           <article class="metric-card reveal card-v2 rise-in delay-1">
             <p class="metric"><span class="metric-value" data-target="15" data-suffix="+">15+</span></p>
-            <p class="label">REST APIs built and maintained</p>
+            <p class="label">Production REST APIs built and maintained</p>
           </article>
           <article class="metric-card reveal card-v2 rise-in delay-2">
             <p class="metric"><span class="metric-value" data-target="30" data-suffix="%">30%</span></p>
-            <p class="label">Average response-time improvement</p>
+            <p class="label">Average API response-time improvement</p>
           </article>
           <article class="metric-card reveal card-v2 rise-in delay-3">
             <p class="metric"><span class="metric-value" data-target="40" data-suffix="%">40%</span></p>
@@ -144,8 +144,8 @@
 
       <section class="section container" id="approach">
         <div class="section-head reveal rise-in">
-          <p class="section-kicker">Working Style</p>
-          <h2>How I deliver as a full-stack developer with backend depth</h2>
+          <p class="section-kicker">Delivery Model</p>
+          <h2>How I execute full-stack delivery with backend depth</h2>
         </div>
         <div class="approach-grid">
           <article class="approach-card reveal card-v2 rise-in">
@@ -178,7 +178,7 @@
       <section class="section container" id="experience">
         <div class="section-head reveal rise-in">
           <p class="section-kicker">Experience</p>
-          <h2>Backend-led full-stack ownership across critical releases</h2>
+          <h2>Owning full-stack outcomes through backend-led engineering</h2>
         </div>
 
         <div class="experience-grid">
@@ -239,7 +239,7 @@
           </div>
 
           <aside class="wins-card reveal card-v2 rise-in delay-2">
-            <h3>How I create impact in teams</h3>
+            <h3>Execution traits teams value</h3>
             <ul>
               <li>Own sprint work end-to-end from planning to post-release monitoring.</li>
               <li>Focus heavily on measurable performance and reliability improvements.</li>
@@ -256,7 +256,7 @@
       <section class="section container" id="projects">
         <div class="section-head reveal rise-in">
           <p class="section-kicker">Case Studies</p>
-          <h2>Full-stack products built end-to-end</h2>
+          <h2>Selected full-stack builds with backend architecture at the center</h2>
         </div>
         <div class="project-grid">
           <article class="project-card reveal card-v2 tilt-card rise-in">
@@ -276,7 +276,7 @@
             </p>
             <p class="stack">Node.js / Express / MongoDB / React / Firebase / Mapbox / JWT</p>
             <p class="project-value">
-              Proves end-to-end ownership: secure auth flows, location-driven UX, and backend API
+              End-to-end ownership with secure auth, location-driven UX, and robust backend service
               design.
             </p>
             <ul class="case-list">
@@ -299,7 +299,7 @@
             </p>
             <p class="stack">MongoDB / Express / React / Node.js / Redux / JWT</p>
             <p class="project-value">
-              Demonstrates scalable full-stack architecture and secure session/state management.
+              Demonstrates scalable full-stack architecture with secure session/state management.
             </p>
             <ul class="case-list">
               <li><strong>Problem:</strong> fragmented developer social workflows.</li>
@@ -312,7 +312,7 @@
 
       <section class="section container split-section">
         <article class="info-card reveal card-v2 rise-in">
-          <h2>Core Skills</h2>
+          <h2>Core Stack</h2>
           <div class="skill-pills">
             <span>JavaScript</span><span>TypeScript</span><span>Node.js</span><span>Express</span>
             <span>GraphQL</span><span>MongoDB</span><span>PostgreSQL</span><span>Redis</span>
@@ -336,7 +336,7 @@
 
       <section class="section container contact-band reveal card-v2 rise-in" id="contact">
         <p class="section-kicker">Contact</p>
-        <h2>Looking for an engineer who can improve performance and reliability quickly?</h2>
+        <h2>Looking for a full-stack engineer who can lead backend-critical delivery?</h2>
         <p>
           I am available for software engineering opportunities focused on backend systems, API
           platform development, and distributed architecture.
