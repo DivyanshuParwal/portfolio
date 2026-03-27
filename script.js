@@ -10,6 +10,7 @@ const copyEmailBtn = document.getElementById("copy-email");
 const metricValues = document.querySelectorAll(".metric-value");
 const tiltCards = document.querySelectorAll(".tilt-card");
 const backToTopButton = document.getElementById("back-to-top");
+const statCards = document.querySelectorAll(".stat-card");
 
 if (yearNode) {
   yearNode.textContent = String(new Date().getFullYear());
@@ -169,6 +170,18 @@ if (window.matchMedia("(pointer: fine)").matches) {
 
     card.addEventListener("mouseleave", () => {
       card.style.transform = "";
+    });
+  });
+}
+
+if (window.matchMedia("(pointer: fine)").matches) {
+  statCards.forEach((card) => {
+    card.addEventListener("mousemove", (event) => {
+      const rect = card.getBoundingClientRect();
+      const relX = (event.clientX - rect.left) / rect.width;
+      const relY = (event.clientY - rect.top) / rect.height;
+      card.style.setProperty("--mx", `${Math.round(relX * 100)}%`);
+      card.style.setProperty("--my", `${Math.round(relY * 100)}%`);
     });
   });
 }
