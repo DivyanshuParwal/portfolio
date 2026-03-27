@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-      - cursor/personal-portfolio-dark-theme-b433
   workflow_dispatch:
 
 permissions:
