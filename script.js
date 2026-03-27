@@ -3,6 +3,7 @@ const nav = document.querySelector(".site-nav");
 const navLinks = document.querySelectorAll('.site-nav a[href^="#"]');
 const sections = document.querySelectorAll("main section[id]");
 const yearNode = document.getElementById("year");
+const revealNodes = document.querySelectorAll(".reveal");
 
 if (yearNode) {
   yearNode.textContent = String(new Date().getFullYear());
@@ -42,3 +43,19 @@ const observer = new IntersectionObserver(
 );
 
 sections.forEach((section) => observer.observe(section));
+
+const revealObserver = new IntersectionObserver(
+  (entries, obs) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add("visible");
+      obs.unobserve(entry.target);
+    });
+  },
+  {
+    threshold: 0.1,
+    rootMargin: "0px 0px -6% 0px"
+  }
+);
+
+revealNodes.forEach((node) => revealObserver.observe(node));
