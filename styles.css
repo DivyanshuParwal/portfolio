@@ -166,6 +166,34 @@ a {
   color: #d7e2ff;
 }
 
+.approach-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.85rem;
+}
+
+.approach-card {
+  padding: 1rem;
+}
+
+.approach-title {
+  margin: 0;
+  color: #9fb4ff;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.approach-card h3 {
+  margin-top: 0.45rem;
+}
+
+.approach-card p {
+  margin: 0.6rem 0 0;
+  color: var(--muted);
+}
+
 .nav-wrap {
   display: flex;
   justify-content: space-between;
@@ -651,6 +679,15 @@ li {
   font-size: 0.93rem;
 }
 
+.case-list {
+  margin-top: 0.6rem;
+}
+
+.case-list li {
+  font-size: 0.88rem;
+  margin-bottom: 0.32rem;
+}
+
 .split-section {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -770,6 +807,10 @@ button:focus-visible {
 
   .proof-track {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .approach-grid {
+    grid-template-columns: 1fr;
   }
 }
 
