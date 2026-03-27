@@ -9,6 +9,7 @@ const cursorGlow = document.getElementById("cursor-glow");
 const copyEmailBtn = document.getElementById("copy-email");
 const metricValues = document.querySelectorAll(".metric-value");
 const tiltCards = document.querySelectorAll(".tilt-card");
+const backToTopButton = document.getElementById("back-to-top");
 
 if (yearNode) {
   yearNode.textContent = String(new Date().getFullYear());
@@ -109,8 +110,18 @@ function updateScrollProgress() {
   progressBar.style.width = `${Math.min(100, Math.max(0, progress))}%`;
 }
 
-updateScrollProgress();
-window.addEventListener("scroll", updateScrollProgress, { passive: true });
+function updateBackToTopVisibility() {
+  if (!backToTopButton) return;
+  backToTopButton.classList.toggle("visible", window.scrollY > 540);
+}
+
+function updateOnScroll() {
+  updateScrollProgress();
+  updateBackToTopVisibility();
+}
+
+updateOnScroll();
+window.addEventListener("scroll", updateOnScroll, { passive: true });
 
 if (cursorGlow && window.matchMedia("(pointer: fine)").matches) {
   cursorGlow.style.opacity = "1";
@@ -179,5 +190,11 @@ if (copyEmailBtn) {
         copyEmailBtn.textContent = defaultLabel;
       }, 1500);
     }
+  });
+}
+
+if (backToTopButton) {
+  backToTopButton.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
   });
 }
