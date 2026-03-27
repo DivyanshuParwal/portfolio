@@ -18,7 +18,13 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
+    <a class="skip-link" href="#home">Skip to main content</a>
+    <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+    <div class="cursor-glow" id="cursor-glow" aria-hidden="true"></div>
     <div class="bg-grid" aria-hidden="true"></div>
+    <div class="bg-orb bg-orb-a" aria-hidden="true"></div>
+    <div class="bg-orb bg-orb-b" aria-hidden="true"></div>
+
     <header class="site-header">
       <div class="container nav-wrap">
         <a class="logo" href="#home">DP<span>/Backend</span></a>
@@ -34,176 +40,237 @@
           <a href="#projects">Projects</a>
           <a href="#contact">Contact</a>
         </nav>
+        <a class="nav-cta" href="#contact">Let's Talk</a>
       </div>
     </header>
 
     <main id="home">
+      <section class="container section social-proof reveal" id="proof">
+        <div class="proof-track">
+          <div class="proof-item">
+            <p class="proof-kicker">Work Impact</p>
+            <p class="proof-value">3M+ users supported in production systems</p>
+          </div>
+          <div class="proof-item">
+            <p class="proof-kicker">Performance</p>
+            <p class="proof-value">30% faster APIs and 20% lower retrieval latency</p>
+          </div>
+          <div class="proof-item">
+            <p class="proof-kicker">Scale</p>
+            <p class="proof-value">15+ APIs across 7 Asian markets</p>
+          </div>
+          <div class="proof-item">
+            <p class="proof-kicker">Recognition</p>
+            <p class="proof-value">Capillary Star Award for backend delivery excellence</p>
+          </div>
+        </div>
+      </section>
+
       <section class="hero container section" id="about">
-        <div class="hero-content reveal">
+        <div class="hero-content reveal card-v2 rise-in">
           <p class="availability">Open to backend engineering opportunities</p>
           <h1>
-            I build API platforms that stay <span>fast, secure, and resilient</span> at production
-            scale.
+            Building backend systems that stay <span>fast, secure, and reliable</span> under real
+            user traffic.
           </h1>
           <p class="hero-text">
             Software Engineer at Capillary Technologies with proven impact across loyalty products
-            used by 3M+ users in 7 Asian markets. I work across Node.js, distributed systems, and
-            cloud infrastructure to ship reliable backend systems recruiters can trust in
-            high-traffic environments.
+            used by 3M+ users in 7 Asian markets. I specialize in Node.js APIs, data modeling,
+            distributed service integration, and production performance optimization.
           </p>
           <div class="hero-cta">
             <a class="btn btn-primary" href="mailto:divyanshuparwal2001@gmail.com">Hire me</a>
-            <a class="btn btn-secondary" href="#projects">See case studies</a>
+            <a class="btn btn-secondary" href="#projects">View my work</a>
           </div>
+          <ul class="trust-row">
+            <li>3M+ users served</li>
+            <li>15+ APIs delivered</li>
+            <li>7 Asian markets</li>
+            <li>Capillary Technologies</li>
+          </ul>
           <ul class="quick-links">
-            <li><a href="mailto:divyanshuparwal2001@gmail.com">divyanshuparwal2001@gmail.com</a></li>
-            <li><a href="tel:+918319639223">+91 83196 39223</a></li>
-            <li><a href="https://github.com/DivyanshuParwal" target="_blank" rel="noreferrer">GitHub</a></li>
+            <li><a href="mailto:divyanshuparwal2001@gmail.com">Email</a></li>
+            <li><a href="tel:+918319639223">Call</a></li>
+            <li>
+              <a href="https://github.com/DivyanshuParwal" target="_blank" rel="noreferrer"
+                >GitHub</a
+              >
+            </li>
           </ul>
         </div>
 
-        <aside class="hero-panel reveal">
-          <h2>Why recruiters shortlist me</h2>
+        <aside class="hero-panel reveal card-v2 rise-in delay-1">
+          <h2>Recruiter snapshot</h2>
           <ul>
-            <li>15+ production REST APIs delivered for enterprise programs.</li>
-            <li>30% faster API response and 20% lower data retrieval latency.</li>
-            <li>JWT + RBAC rollout for 3M+ accounts with zero post-launch auth incidents.</li>
-            <li>Event-driven architecture reduced cascading failure risk by 40%.</li>
+            <li>Built and maintained APIs for enterprise programs like Shell and IndiGo.</li>
+            <li>Cut average API response time by 30% and retrieval latency by 20%.</li>
+            <li>Implemented JWT + RBAC across 3M+ accounts with zero post-release auth incidents.</li>
+            <li>Reduced cascading failure risk by 40% through event-driven service workflows.</li>
           </ul>
+          <div class="badge-group">
+            <span>Node.js</span><span>Microservices</span><span>MongoDB</span><span>AWS</span>
+          </div>
         </aside>
       </section>
 
       <section class="section container" id="impact">
-        <div class="section-head reveal">
+        <div class="section-head reveal rise-in">
           <p class="section-kicker">Performance Snapshot</p>
           <h2>Measured delivery, not just responsibilities</h2>
         </div>
         <div class="metric-grid">
-          <article class="metric-card reveal">
-            <p class="metric">3M+</p>
+          <article class="metric-card reveal card-v2 rise-in">
+            <p class="metric"><span class="metric-value" data-target="3" data-suffix="M+">3M+</span></p>
             <p class="label">Users supported across loyalty platforms</p>
           </article>
-          <article class="metric-card reveal">
-            <p class="metric">15+</p>
+          <article class="metric-card reveal card-v2 rise-in delay-1">
+            <p class="metric"><span class="metric-value" data-target="15" data-suffix="+">15+</span></p>
             <p class="label">REST APIs built and maintained</p>
           </article>
-          <article class="metric-card reveal">
-            <p class="metric">30%</p>
+          <article class="metric-card reveal card-v2 rise-in delay-2">
+            <p class="metric"><span class="metric-value" data-target="30" data-suffix="%">30%</span></p>
             <p class="label">Average response-time improvement</p>
           </article>
-          <article class="metric-card reveal">
-            <p class="metric">40%</p>
+          <article class="metric-card reveal card-v2 rise-in delay-3">
+            <p class="metric"><span class="metric-value" data-target="40" data-suffix="%">40%</span></p>
             <p class="label">Reduction in cascading service failure risk</p>
           </article>
         </div>
       </section>
 
       <section class="section container" id="experience">
-        <div class="section-head reveal">
+        <div class="section-head reveal rise-in">
           <p class="section-kicker">Experience</p>
           <h2>Backend ownership across critical product releases</h2>
         </div>
 
-        <div class="timeline">
-          <article class="timeline-card reveal">
-            <div class="timeline-title">
-              <h3>Software Engineer - Capillary Technologies</h3>
-              <p>Jul 2023 - Present | Remote</p>
-            </div>
-            <ul>
-              <li>
-                Delivered and maintained backend services for major enterprise programs including
-                Shell and IndiGo.
-              </li>
-              <li>
-                Improved API performance by redesigning MongoDB/PostgreSQL query paths, schema
-                decisions, and index strategy.
-              </li>
-              <li>
-                Built reusable partner integration middleware and adapter patterns, accelerating
-                integration delivery by 25%.
-              </li>
-              <li>
-                Defined API contracts across 5+ microservices to reduce cross-service integration
-                failures by 35%.
-              </li>
-            </ul>
-            <div class="chips">
-              <span>Node.js</span><span>Express</span><span>MongoDB</span><span>PostgreSQL</span
-              ><span>JWT/RBAC</span><span>AWS</span>
-            </div>
-          </article>
+        <div class="experience-grid">
+          <div class="timeline">
+            <article class="timeline-card reveal card-v2 rise-in">
+              <div class="timeline-title">
+                <h3>Software Engineer - Capillary Technologies</h3>
+                <p>Jul 2023 - Present | Remote</p>
+              </div>
+              <ul>
+                <li>
+                  Built and maintained 15+ REST APIs for enterprise loyalty systems serving 3M+
+                  users across 7 Asian markets.
+                </li>
+                <li>
+                  Improved API response time by 30% and reduced data retrieval latency by 20%
+                  through indexing, query tuning, and schema decisions.
+                </li>
+                <li>
+                  Designed reusable integration middleware for external services, improving
+                  third-party delivery speed by 25%.
+                </li>
+                <li>
+                  Defined API contracts across 5+ microservices, reducing cross-service integration
+                  failures by 35%.
+                </li>
+              </ul>
+              <div class="chips">
+                <span>Node.js</span><span>Express</span><span>MongoDB</span><span>PostgreSQL</span
+                ><span>JWT/RBAC</span><span>AWS</span>
+              </div>
+            </article>
 
-          <article class="timeline-card reveal">
-            <div class="timeline-title">
-              <h3>Software Engineer Intern - Capillary Technologies</h3>
-              <p>Jan 2023 - Jun 2023 | Remote</p>
-            </div>
+            <article class="timeline-card reveal card-v2 rise-in delay-1">
+              <div class="timeline-title">
+                <h3>Software Engineer Intern - Capillary Technologies</h3>
+                <p>Jan 2023 - Jun 2023 | Remote</p>
+              </div>
+              <ul>
+                <li>
+                  Delivered 8+ production backend endpoints in the first month, contributing to
+                  live accrual/redemption systems.
+                </li>
+                <li>
+                  Reduced module complexity by 20% through refactoring and consistent error handling
+                  patterns.
+                </li>
+                <li>Built regression suites that caught 10+ critical pre-release defects.</li>
+              </ul>
+              <div class="chips">
+                <span>APIs</span><span>Testing</span><span>Refactoring</span><span>Distributed Systems</span>
+              </div>
+            </article>
+          </div>
+
+          <aside class="wins-card reveal card-v2 rise-in delay-2">
+            <h3>How I create impact in teams</h3>
             <ul>
-              <li>
-                Shipped 8+ backend endpoints in the live codebase within the first month of
-                onboarding.
-              </li>
-              <li>
-                Refactored legacy service modules and reduced complexity by 20% with consistent
-                error handling.
-              </li>
-              <li>
-                Built Postman regression suites that caught 10+ critical pre-release defects.
-              </li>
+              <li>Own sprint work end-to-end from planning to post-release monitoring.</li>
+              <li>Focus heavily on measurable performance and reliability improvements.</li>
+              <li>Bring strong API contract discipline in multi-service environments.</li>
+              <li>Balance delivery speed with code maintainability and fault tolerance.</li>
             </ul>
-            <div class="chips">
-              <span>APIs</span><span>Testing</span><span>Refactoring</span><span>Microservices</span>
-            </div>
-          </article>
+            <p class="wins-note">
+              Awarded <strong>Capillary Star Award (Dec 2023)</strong> for backend delivery impact.
+            </p>
+          </aside>
         </div>
       </section>
 
       <section class="section container" id="projects">
-        <div class="section-head reveal">
+        <div class="section-head reveal rise-in">
           <p class="section-kicker">Selected Projects</p>
-          <h2>Products built end-to-end beyond work</h2>
+          <h2>Products built end-to-end outside work</h2>
         </div>
         <div class="project-grid">
-          <article class="project-card reveal">
+          <article class="project-card reveal card-v2 tilt-card rise-in">
+            <div class="project-mock project-mock-budgetstayz" aria-hidden="true">
+              <div class="mock-bar"></div>
+              <div class="mock-grid">
+                <div class="mock-map"></div>
+                <div class="mock-panel">
+                  <span></span><span></span><span></span>
+                </div>
+              </div>
+            </div>
             <h3>BudgetStayz</h3>
             <p>
               Full-stack couch surfing product with map-based room discovery, city-level filtering,
-              JWT auth, and Google One Tap login integration.
+              JWT auth, and Google One Tap login.
             </p>
             <p class="stack">Node.js / Express / MongoDB / React / Firebase / Mapbox / JWT</p>
             <p class="project-value">
-              Demonstrates full ownership from authentication and API design to frontend UX and
-              location intelligence.
+              Proves end-to-end ownership: secure auth flows, location-driven UX, and backend API
+              design.
             </p>
           </article>
-          <article class="project-card reveal">
+          <article class="project-card reveal card-v2 tilt-card rise-in delay-1">
+            <div class="project-mock project-mock-devhub" aria-hidden="true">
+              <div class="mock-bar"></div>
+              <div class="mock-feed">
+                <span></span><span></span><span></span><span></span>
+              </div>
+            </div>
             <h3>DevHub</h3>
             <p>
-              MERN social platform for developers with profile workflows, posts, and connection
-              features managed through Redux and REST APIs.
+              MERN developer social platform with profile workflows, posts, and connection features
+              using Redux and REST APIs.
             </p>
             <p class="stack">MongoDB / Express / React / Node.js / Redux / JWT</p>
             <p class="project-value">
-              Shows practical experience with scalable full-stack architecture and secure session
-              management.
+              Demonstrates scalable full-stack architecture and secure session/state management.
             </p>
           </article>
         </div>
       </section>
 
       <section class="section container split-section">
-        <article class="info-card reveal">
+        <article class="info-card reveal card-v2 rise-in">
           <h2>Core Skills</h2>
-          <ul class="skill-list">
-            <li>JavaScript (ES6+), TypeScript, SQL</li>
-            <li>Node.js, Express, GraphQL, Mongoose</li>
-            <li>MongoDB, PostgreSQL, Redis</li>
-            <li>Docker, Kafka, AWS, CI/CD</li>
-            <li>Microservices, event-driven design, system design</li>
-          </ul>
+          <div class="skill-pills">
+            <span>JavaScript</span><span>TypeScript</span><span>Node.js</span><span>Express</span>
+            <span>GraphQL</span><span>MongoDB</span><span>PostgreSQL</span><span>Redis</span>
+            <span>Docker</span><span>Kafka</span><span>AWS</span><span>CI/CD</span>
+            <span>System Design</span><span>Microservices</span>
+          </div>
         </article>
-        <article class="info-card reveal">
+
+        <article class="info-card reveal card-v2 rise-in delay-1">
           <h2>Education & Recognition</h2>
           <p>
             B.E. in Electronics and Telecommunication Engineering, Institute of Engineering and
@@ -216,17 +283,21 @@
         </article>
       </section>
 
-      <section class="section container contact-band reveal" id="contact">
+      <section class="section container contact-band reveal card-v2 rise-in" id="contact">
         <p class="section-kicker">Contact</p>
-        <h2>Need a backend engineer who can deliver at scale?</h2>
+        <h2>Looking for an engineer who can improve performance and reliability quickly?</h2>
         <p>
-          I am available for software engineering opportunities focused on backend systems,
-          performance, and platform reliability.
+          I am available for software engineering opportunities focused on backend systems, API
+          platform development, and distributed architecture.
         </p>
         <div class="hero-cta">
           <a class="btn btn-primary" href="mailto:divyanshuparwal2001@gmail.com">Email me</a>
           <a class="btn btn-secondary" href="tel:+918319639223">Call me</a>
+          <button class="btn btn-ghost" id="copy-email" type="button" data-default-label="Copy email">
+            Copy email
+          </button>
         </div>
+        <p class="contact-note">Based in India · Open to remote and hybrid roles</p>
       </section>
     </main>
 
