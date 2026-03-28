@@ -1,14 +1,14 @@
 :root {
-  --bg: #070b16;
-  --surface: #10172d;
-  --surface-2: #141f3f;
-  --text: #ecf2ff;
-  --muted: #aebcde;
-  --brand: #7f8fff;
-  --brand-2: #3cc8ff;
-  --line: rgba(153, 173, 255, 0.22);
-  --radius: 20px;
-  --shadow: 0 20px 50px rgba(1, 6, 21, 0.5);
+  --bg: #080d1b;
+  --surface: #111a34;
+  --surface-2: #0f1730;
+  --text: #edf3ff;
+  --muted: #adbcde;
+  --brand: #8090ff;
+  --brand-2: #46ceff;
+  --line: rgba(144, 164, 248, 0.2);
+  --radius: 18px;
+  --shadow: 0 18px 44px rgba(1, 6, 20, 0.46);
 }
 
 *,
@@ -26,10 +26,10 @@ body {
   font-family: "Inter", sans-serif;
   color: var(--text);
   background:
-    radial-gradient(circle at 10% -20%, rgba(67, 90, 184, 0.46), transparent 40%),
-    radial-gradient(circle at 88% 0%, rgba(42, 170, 255, 0.2), transparent 30%),
+    radial-gradient(circle at 12% -16%, rgba(80, 108, 214, 0.4), transparent 40%),
+    radial-gradient(circle at 84% 4%, rgba(63, 184, 255, 0.17), transparent 30%),
     var(--bg);
-  line-height: 1.68;
+  line-height: 1.64;
 }
 
 a {
@@ -113,25 +113,25 @@ a {
 }
 
 .container {
-  width: min(1140px, 92%);
+  width: min(1120px, 92%);
   margin: 0 auto;
 }
 
 .section {
-  padding: 1.55rem 0 3.1rem;
+  padding: 1.35rem 0 2.75rem;
 }
 
 .site-header {
   position: sticky;
   top: 0;
   z-index: 80;
-  backdrop-filter: blur(10px);
-  background: rgba(7, 11, 22, 0.76);
+  backdrop-filter: blur(9px);
+  background: rgba(8, 12, 24, 0.74);
   border-bottom: 1px solid rgba(149, 167, 252, 0.15);
 }
 
 .nav-wrap {
-  min-height: 74px;
+  min-height: 72px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -140,13 +140,24 @@ a {
 
 .logo {
   font-family: "Space Grotesk", sans-serif;
-  font-size: 1.12rem;
+  font-size: 1.08rem;
   font-weight: 700;
-  letter-spacing: 0.35px;
+  letter-spacing: 0.3px;
 }
 
-.logo span {
-  color: var(--brand);
+.logo-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  margin-right: 0.45rem;
+  border-radius: 8px;
+  border: 1px solid rgba(129, 146, 251, 0.35);
+  background: rgba(127, 144, 255, 0.12);
+  color: #dfe9ff;
+  font-size: 0.8rem;
+  font-weight: 700;
 }
 
 .site-nav {
@@ -156,7 +167,7 @@ a {
 }
 
 .site-nav a {
-  font-size: 0.94rem;
+  font-size: 0.9rem;
   color: var(--muted);
   font-weight: 500;
   transition: color 0.2s ease;
@@ -170,7 +181,7 @@ a {
 .nav-cta {
   border: 1px solid var(--line);
   border-radius: 999px;
-  padding: 0.44rem 0.84rem;
+  padding: 0.4rem 0.8rem;
   font-size: 0.84rem;
   color: #dbe7ff;
   background: rgba(127, 143, 255, 0.12);
@@ -197,7 +208,7 @@ a {
 }
 
 .social-proof {
-  padding-top: 1.45rem;
+  padding-top: 1.3rem;
 }
 
 .proof-track {
@@ -211,7 +222,7 @@ a {
 }
 
 .proof-item {
-  padding: 0.88rem 0.95rem;
+  padding: 0.75rem 0.9rem;
   border-right: 1px solid rgba(149, 165, 255, 0.17);
 }
 
@@ -223,21 +234,21 @@ a {
   margin: 0;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  font-size: 0.72rem;
+  font-size: 0.68rem;
   color: #9eb3ff;
   font-weight: 700;
 }
 
 .proof-value {
   margin: 0.18rem 0 0;
-  font-size: 0.88rem;
+  font-size: 0.84rem;
   color: #d6e2ff;
 }
 
 .hero {
   display: grid;
-  grid-template-columns: 1.18fr 0.82fr;
-  gap: 1rem;
+  grid-template-columns: 1fr;
+  gap: 0.95rem;
 }
 
 .card-v2 {
@@ -250,7 +261,7 @@ a {
 }
 
 .card-v2:hover {
-  transform: translateY(-3px);
+  transform: translateY(-2px);
   border-color: rgba(180, 193, 255, 0.44);
   box-shadow: 0 28px 62px rgba(1, 6, 21, 0.6);
 }
@@ -264,14 +275,14 @@ a {
 .project-card,
 .info-card,
 .contact-band {
-  padding: 1.15rem 1.1rem;
+  padding: 1rem;
 }
 
 .hero-blur {
   position: absolute;
   inset: auto -88px -90px auto;
-  width: 230px;
-  height: 230px;
+  width: 210px;
+  height: 210px;
   border-radius: 50%;
   background: radial-gradient(circle, rgba(115, 144, 255, 0.25), transparent 70%);
   filter: blur(22px);
@@ -281,7 +292,7 @@ a {
 .availability {
   display: inline-flex;
   margin: 0;
-  font-size: 0.84rem;
+  font-size: 0.8rem;
   font-weight: 600;
   color: #def0ff;
   padding: 0.35rem 0.72rem;
@@ -298,10 +309,10 @@ h3 {
 }
 
 h1 {
-  margin-top: 0.95rem;
-  max-width: 19ch;
+  margin-top: 0.85rem;
+  max-width: 22ch;
   font-family: "Space Grotesk", sans-serif;
-  font-size: clamp(2rem, 4.1vw, 3.5rem);
+  font-size: clamp(1.9rem, 3.7vw, 3.1rem);
 }
 
 h1 span {
@@ -309,16 +320,17 @@ h1 span {
 }
 
 .hero-text {
-  margin: 1rem 0 0;
+  margin: 0.85rem 0 0;
   color: var(--muted);
-  max-width: 63ch;
+  max-width: 66ch;
+  font-size: 0.98rem;
 }
 
 .hero-cta {
   display: flex;
   flex-wrap: wrap;
   gap: 0.72rem;
-  margin-top: 1.2rem;
+  margin-top: 1rem;
 }
 
 .btn {
@@ -326,7 +338,7 @@ h1 span {
   align-items: center;
   justify-content: center;
   border-radius: 11px;
-  padding: 0.72rem 1.08rem;
+  padding: 0.66rem 1rem;
   border: 1px solid transparent;
   font-weight: 600;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -338,7 +350,7 @@ h1 span {
 
 .btn-primary {
   color: #fff;
-  background: linear-gradient(130deg, #7081ff, #4d62ff);
+  background: linear-gradient(130deg, #7385ff, #4f64ff);
 }
 
 .btn-secondary {
@@ -355,7 +367,7 @@ h1 span {
 
 .trust-row,
 .quick-links {
-  margin: 1rem 0 0;
+  margin: 0.85rem 0 0;
   padding: 0;
   list-style: none;
   display: flex;
@@ -365,7 +377,7 @@ h1 span {
 
 .trust-row li {
   margin: 0;
-  font-size: 0.82rem;
+  font-size: 0.78rem;
   color: #d2dfff;
   border: 1px solid rgba(143, 162, 255, 0.32);
   border-radius: 999px;
@@ -377,11 +389,11 @@ h1 span {
   color: #cdd9ff;
   text-decoration: underline;
   text-decoration-color: rgba(205, 217, 255, 0.34);
-  text-underline-offset: 4px;
+  text-underline-offset: 3px;
 }
 
 .hero-panel li {
-  margin-bottom: 0.52rem;
+  margin-bottom: 0.45rem;
   color: #d6e0ff;
 }
 
@@ -396,18 +408,18 @@ h1 span {
   border: 1px solid rgba(123, 212, 255, 0.35);
   color: #d2f1ff;
   border-radius: 999px;
-  font-size: 0.78rem;
+  font-size: 0.74rem;
   padding: 0.2rem 0.55rem;
   background: rgba(66, 186, 255, 0.1);
 }
 
 .section-head {
-  margin-bottom: 0.95rem;
+  margin-bottom: 0.8rem;
 }
 
 .section-kicker {
   margin: 0 0 0.38rem;
-  font-size: 0.77rem;
+  font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -416,14 +428,14 @@ h1 span {
 
 h2 {
   font-family: "Space Grotesk", sans-serif;
-  font-size: clamp(1.4rem, 2.6vw, 2.05rem);
+  font-size: clamp(1.3rem, 2.1vw, 1.75rem);
 }
 
 .metric-grid,
 .approach-grid,
 .project-grid {
   display: grid;
-  gap: 0.85rem;
+  gap: 0.75rem;
 }
 
 .metric-grid {
@@ -441,7 +453,7 @@ h2 {
 
 .approach-title {
   margin: 0;
-  font-size: 0.74rem;
+  font-size: 0.68rem;
   font-weight: 700;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -456,7 +468,7 @@ h2 {
 .metric {
   margin: 0;
   font-family: "Space Grotesk", sans-serif;
-  font-size: 2rem;
+  font-size: 1.7rem;
   font-weight: 800;
 }
 
@@ -479,46 +491,32 @@ h2 {
 .label {
   margin: 0.2rem 0 0;
   color: var(--muted);
-  font-size: 0.93rem;
+  font-size: 0.86rem;
 }
 
 .experience-grid {
   display: grid;
-  grid-template-columns: 1.22fr 0.78fr;
-  gap: 0.85rem;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
   align-items: start;
 }
 
 .timeline {
   display: grid;
-  gap: 0.85rem;
+  gap: 0.75rem;
 }
 
 .timeline-rail {
   position: relative;
-  padding-left: 0.95rem;
+  padding-left: 0;
 }
 
 .timeline-rail::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0.45rem;
-  bottom: 0.45rem;
-  width: 1px;
-  background: linear-gradient(180deg, rgba(131, 151, 255, 0.48), rgba(131, 151, 255, 0.08));
+  display: none;
 }
 
 .timeline-card::after {
-  content: "";
-  position: absolute;
-  left: -1.36rem;
-  top: 1.03rem;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  border: 2px solid rgba(165, 184, 255, 0.9);
-  background: rgba(19, 29, 58, 0.96);
+  display: none;
 }
 
 .timeline-title {
@@ -530,27 +528,28 @@ h2 {
 }
 
 h3 {
-  font-size: 1.08rem;
+  font-size: 1rem;
 }
 
 .timeline-title p {
   margin: 0;
   color: var(--muted);
-  font-size: 0.93rem;
+  font-size: 0.86rem;
 }
 
 ul {
-  margin: 0.78rem 0 0;
+  margin: 0.68rem 0 0;
   padding-left: 1.15rem;
 }
 
 li {
-  margin-bottom: 0.48rem;
+  margin-bottom: 0.42rem;
   color: #d6e1ff;
+  font-size: 0.94rem;
 }
 
 .chips {
-  margin-top: 0.55rem;
+  margin-top: 0.45rem;
   display: flex;
   flex-wrap: wrap;
   gap: 0.45rem;
@@ -560,7 +559,7 @@ li {
   border: 1px solid rgba(151, 168, 255, 0.36);
   border-radius: 999px;
   padding: 0.22rem 0.6rem;
-  font-size: 0.8rem;
+  font-size: 0.73rem;
   color: #d4ddff;
   background: rgba(151, 168, 255, 0.1);
 }
@@ -568,7 +567,7 @@ li {
 .wins-note {
   margin: 0.72rem 0 0;
   color: #cedcff;
-  font-size: 0.92rem;
+  font-size: 0.86rem;
 }
 
 .project-mock {
@@ -644,18 +643,18 @@ li {
 }
 
 .project-card p {
-  margin: 0.75rem 0 0;
+  margin: 0.62rem 0 0;
   color: var(--muted);
 }
 
 .stack {
-  font-size: 0.88rem;
+  font-size: 0.8rem;
   color: #c6d8ff;
   font-weight: 600;
 }
 
 .project-value {
-  font-size: 0.93rem;
+  font-size: 0.88rem;
 }
 
 .case-list {
@@ -663,14 +662,14 @@ li {
 }
 
 .case-list li {
-  font-size: 0.87rem;
-  margin-bottom: 0.3rem;
+  font-size: 0.82rem;
+  margin-bottom: 0.26rem;
 }
 
 .split-section {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.85rem;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
 }
 
 .skill-pills {
@@ -684,7 +683,7 @@ li {
   border: 1px solid rgba(164, 178, 255, 0.35);
   border-radius: 10px;
   padding: 0.26rem 0.54rem;
-  font-size: 0.82rem;
+  font-size: 0.76rem;
   color: #dae3ff;
   background: rgba(141, 156, 255, 0.09);
 }
@@ -695,7 +694,7 @@ li {
 }
 
 .contact-note {
-  font-size: 0.9rem;
+  font-size: 0.84rem;
   color: #cfdbff;
 }
 
@@ -706,9 +705,10 @@ li {
 
 .site-footer p {
   margin: 0;
-  padding: 1.1rem 0;
+  padding: 0.95rem 0;
   text-align: center;
-  color: var(--muted);
+  color: #98a9cf;
+  font-size: 0.9rem;
 }
 
 .back-to-top {
@@ -787,13 +787,10 @@ button:focus-visible {
 }
 
 @media (max-width: 1000px) {
-  .hero,
-  .experience-grid,
   .proof-track,
   .metric-grid,
   .approach-grid,
-  .project-grid,
-  .split-section {
+  .project-grid {
     grid-template-columns: 1fr;
   }
 
